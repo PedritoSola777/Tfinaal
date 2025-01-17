@@ -2891,7 +2891,7 @@ body.flyout-searchbar-active .wraper_search > .table > .table-cell .inner_search
     transition: all 200ms ease;
 }
 
-.banner-section .carousel-outer .thumbs-carousel .owl-next:hover{
+/* .banner-section .carousel-outer .thumbs-carousel .owl-next:hover{
 	color: #e38b00;
 }
 
@@ -2904,7 +2904,7 @@ body.flyout-searchbar-active .wraper_search > .table > .table-cell .inner_search
     margin-left: 28px;
     font-size: 40px;
     color: #e38b00;
-}
+} */
 
 
 /*** 
@@ -3325,7 +3325,7 @@ body.flyout-searchbar-active .wraper_search > .table > .table-cell .inner_search
 	height: 0;
 }
 
-.banner-carousel-two .owl-next,
+/* .banner-carousel-two .owl-next,
 .banner-carousel-two .owl-prev{
 	position: relative;
 	display: inline-block;
@@ -3343,12 +3343,9 @@ body.flyout-searchbar-active .wraper_search > .table > .table-cell .inner_search
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
-}
+} */
 
-.banner-carousel-two .owl-next:hover,
-.banner-carousel-two .owl-prev:hover{
-	color: #ff8a00;
-}
+/*  */
 
 .banner-carousel-two .owl-next:before,
 .banner-carousel-two .owl-prev:before{
@@ -3368,21 +3365,21 @@ body.flyout-searchbar-active .wraper_search > .table > .table-cell .inner_search
 	transition: all 200ms ease;
 }
 
-.banner-carousel-two .owl-next:hover:before,
+/* .v:hover:before,
 .banner-carousel-two .owl-prev:hover:before{
 	border-color: #ff8a00;
-}
+} */
 
-.banner-carousel-two .owl-next:before{
+/* .banner-carousel-two .owl-next:before{
 	left: auto;
 	right: -25px;
 	border: 2px solid #bbbbbb;
 	border-left: 0;
-}
+} */
 
-.banner-carousel-two .owl-next span{
+/* .banner-carousel-two .owl-next span{
 	margin-left: 5px;
-}
+} */
 
 .banner-carousel-two .owl-prev span{
 	margin-right: 5px;
@@ -6077,7 +6074,7 @@ body.flyout-searchbar-active .wraper_search > .table > .table-cell .inner_search
 .project-tab .projects-carousel .owl-nav .owl-next span{
 	margin-left: 15px;
 }
-.project-tab .projects-carousel .owl-nav .owl-next::before {
+/* .project-tab .projects-carousel .owl-nav .owl-next::before {
 	content: "";
 	position: absolute;
 	left: -15px;
@@ -6085,7 +6082,7 @@ body.flyout-searchbar-active .wraper_search > .table > .table-cell .inner_search
 	width: 2px;
 	height: 15px;
 	background-color: #bbbbbb;
-}
+} */
 .project-tab .projects-carousel .owl-nav .owl-prev span{
 	margin-right: 15px;
 }

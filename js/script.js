@@ -152,7 +152,7 @@
 					margin: 20,
 					items: 1,
 					nav: true,
-					navText: [ '<i class="flaticon-next"></i> prev', 'next<i class="flaticon-next"></i>' ],
+					//navText: [ '<i class="flaticon-next"></i> prev', 'next<i class="flaticon-next"></i>' ],
 					dots: false,
 					center: false,
 					autoplay: false,
