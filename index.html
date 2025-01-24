@@ -551,12 +551,16 @@
     </section>
     <!--End Services Section -->
 
-
-    <div class="popup-card">
+    <div id="chat-icon" class="chat-icon" onclick="togglePopup()">
+        💬
+      </div>
+      
+      <div id="popup-card" class="popup-card">
+        <span class="close-btn" onclick="togglePopup()">✖</span>
         <img src="images/icons/team-3.jpg" alt="Perfil de María" class="profile-image">
         <div class="popup-content">
           <h4>Elizabeth Robles -</h4>
-          <p>Bienvenido a Terra Consultores. Si necesitas más información sobre nuestros servicios o necesitas ayuda de un asesor para realizar cualquier trámite con tu Afore, envíanos mensaje.</p>
+          <p>Bienvenido a Terra Consultores. Si necesitas más información sobre nuestros servicios o necesitas ayuda de un asesor para realizar cualquier trámite con tu Afore, envíanos mensaje vía WhatsApp</p>
           <div class="popup-actions">
             <a href="mailto:soporte@terra-consultores.com" class="email-btn">E-mail</a>
             <a href="https://wa.me/7224611922" target="_blank" class="whatsapp-btn">WhatsApp</a>
@@ -565,7 +569,7 @@
       </div>
 
       
-      <style>
+     <style>
         .popup-card {
   position: fixed;
   bottom: 20px;
@@ -574,7 +578,7 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
+  display: none; /* Initially hidden */
   padding: 15px;
   font-family: Arial, sans-serif;
   z-index: 1000;
@@ -632,8 +636,36 @@
   opacity: 0.9;
 }
 
+/* Close Button Styles */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #999;
+}
 
-      </style>
+/* Chat Icon Styles */
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e38b00;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1000;
+}
+     </style>
 
 
     <!--Fluid Section One Section -->
@@ -666,174 +698,173 @@
     <!--Project Section-->
     
     <!--testimonial Section -->
-    <section class="testimonial-section">
-        <div class="outer-container clearfix">
-            <div class="testmonial-outer">
-                <!--Image Column-->
-                <div class="image-column wow fadeInLeft animated" style="background-image: url(&quot;images/background/7.jpg&quot;); visibility: visible; animation-name: fadeInLeft;">
-                    <figure class="image-box"><img src="images/background/7.jpg" alt=""></figure>
+    <section class="testimonial-section-two"  style="background-image: url(images/background/23.jpg);">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h2>Clientes satisfechos</h2>
+            </div>
+
+            <div class="testimonial-carousel-two owl-carousel owl-theme">
+                <!-- Testimonial block two -->
+                <div class="testimonial-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <div class="thumb"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7mirdobZYsLYwk8XiD-cApE_7hguF0v-qL_V41vaQfkXrcr8OgBKf4LKMsUxFSaX0IVAMo8sgQ4q-OXbSNtmBYA" alt=""></div>
+                        </div>
+                         <div class="info-box">
+                            <div class="text">Excelente servicio, me ayudaron a entender mis opciones y a realizar todos los trámites sin complicaciones. Definitivamente los recomiendo</div>
+                            <h5 class="name">Juan Gonzales</h5>
+                        </div>
+                    </div>
                 </div>
 
-                <!--Image Column-->
-                <div class="image-column-two wow fadeInRight animated" style="background-image: url(&quot;images/background/6.jpg&quot;); visibility: visible; animation-name: fadeInRight;">
-                    <figure class="image-box"><img src="images/background/6.jpg" alt=""></figure>
+                <!-- Testimonial block two -->
+                <div class="testimonial-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <div class="thumb"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=157,h=198,fit=crop/Yg2lDkG0vafKPjKe/images-Yg2qEZwOw3FnR1p5.jpeg" alt=""></div>
+                        </div>
+                         <div class="info-box">
+                            <div class="text">El proceso tardó más de lo que esperaba y no recibí actualizaciones constantes sobre mi trámite.</div>
+                            <h5 class="name">Carlos Jimenez</h5>
+                        </div>
+                    </div>
                 </div>
-        </div>
 
-                <!-- Testimonial Column -->
-                <div class="auto-container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="testimonial-column clearfix">
-                                <div class="inner-column">
-                                    <div class="sec-title text-left">
-                                        <h2>Clientes Satisfechos</h2>
-                                    </div>
-                                    <div class="testimonial-carousel owl-carousel owl-theme">
-                                        <!-- Testimonial Block -->
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">"Excelente servicio, me ayudaron a entender mis opciones y a realizar todos los trámites sin complicaciones. Definitivamente los recomiendo."
+                <!-- Testimonial block two -->
+                <div class="testimonial-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <div class="thumb"><img src="https://images.unsplash.com/photo-1720210470561-941744ebad00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2VudGUlMjBtZXhpY2FuYXxlbnwwfHwwfHx8MA%3D%3D" alt=""></div>
+                        </div>
+                         <div class="info-box">
+                            <div class="text">Gracias a su asesoría, pude recuperar mi ahorro de afore rápidamente. El equipo es profesional y siempre estuvo al tanto de mi caso.</div>
+                            <h5 class="name">Sofia martinez</h5>
+                        </div>
+                    </div>
+                </div>
 
-                                                </div>
+                <!-- Testimonial block two -->
+                <div class="testimonial-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/SuicideSquadHarleyQuinn.jpg/220px-SuicideSquadHarleyQuinn.jpg" alt=""></div>
+                        </div>
+                         <div class="info-box">
+                            <div class="text">Me ayudaron a sacar mi crédito de Infonavit y ya estoy viendo lo de mi casita. Muchas gracias.</div>
+                            <h5 class="name">Mariana Lopez</h5>
+                        </div>
+                    </div>
+                </div>
 
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7mirdobZYsLYwk8XiD-cApE_7hguF0v-qL_V41vaQfkXrcr8OgBKf4LKMsUxFSaX0IVAMo8sgQ4q-OXbSNtmBYA" alt="" style="width: 100px;"></div>
-                                                    <div class="text-box">
-                                                        <h5 class="name">Juanito Banana</h5>
-                                                        <!-- <span class="designation">CEO, InDesign</span> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Testimonial Block -->
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">El proceso tardó más de lo que esperaba y no recibí actualizaciones constantes sobre mi trámite.
-                                                </div>
-
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=157,h=198,fit=crop/Yg2lDkG0vafKPjKe/images-Yg2qEZwOw3FnR1p5.jpeg" alt="" style="width: 100px;"></div>
-                                                    <div class="text-box">
-                                                        <h5 class="name">Carlos Jimenez</h5>
-                                                        <!-- <span class="designation">CEO, InDesign</span> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Testimonial Block -->
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">Gracias a su asesoría, pude recuperar mi ahorro de afore rápidamente. El equipo es profesional y siempre estuvo al tanto de mi caso."
-                                                </div>
-
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="https://images.unsplash.com/photo-1720210470561-941744ebad00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2VudGUlMjBtZXhpY2FuYXxlbnwwfHwwfHx8MA%3D%3D" style="width: 80px;" alt=""></div>
-                                                    <div class="text-box">
-                                                        <h5 class="name">Sofía Martínez</h5>
-                                                        <!-- <span class="designation">CEO, InDesign</span> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Testimonial Block -->
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">"No me gusto el servicio, tardaron muxho en responder y no me explikaron bien komo aser el tramite. No los rekomiendo."   
-                                                </div>
-
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=157,h=198,fit=crop/Yg2lDkG0vafKPjKe/mz-exj-YlevPE1llZH9jRa8.jpeg" alt="" style="width: 100px;"></div>
-                                                    <div class="text-box">
-                                                        <h5 class="name">
-                                                            María Fernanda</h5>
-                                                        <!-- <span class="designation">CEO, InDesign</span> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                <!-- Testimonial block two -->
+                <div class="testimonial-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <div class="thumb"><img src="https://www.sportspro.com/wp-content/uploads/2023/03/ferrari.png" alt=""></div>
+                        </div>
+                         <div class="info-box">
+                            <div class="text">Yo los contraté para que me ayudaran con la pensión de mi abuelo, sólo que sí es muy tardado todo.</div>
+                            <h5 class="name">Luis Hernandez</h5>
+                        </div>
+                    </div>
+                </div>
 
 
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">Yo realicé mi retiro por desempleo en noviembre y no fue tan complicado como pensaba.</div>
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="https://logos-world.net/wp-content/uploads/2023/02/Cruz-Azul-Logo-2021.png" alt="" style="width: 100px;"></div>
-                                                    <div class="text-box">
-                                                        <h5 class="name">Javier Martínez</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">Me ayudaron a sacar mi crédito de Infonavit y ya estoy viendo lo de mi casita. Muchas gracias.</div>
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/SuicideSquadHarleyQuinn.jpg/220px-SuicideSquadHarleyQuinn.jpg" alt="" style="height: 150px;"></div>
-                                                    <div class="text-box">
-                                                        <h5 class="name">Mariana López</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">Yo los contraté para que me ayudaran con la pensión de mi abuelo, sólo que sí es muy tardado todo.</div>
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="https://www.sportspro.com/wp-content/uploads/2023/03/ferrari.png" alt="" style="width: 100px;"></div>
-                                                    <div class="text-box">
-                                                        <h5 class="name">Luis Hernández</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        
-
-
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">No sabía que ya calificaba para el credito de infonavit estoy haciendo el crediterreno.</div>
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="images/clients/nuevo.png" alt="" style="width: 100px;"></div>
-                                                    <div class="text-box">
-                                                        <h5 class="name">Miguel Gomez</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Testimonial Block -->
-                                        <div class="testimonial-block">
-                                            <div class="inner-box">
-                                                <div class="text">A mí me recomendó mi prima a esta empresa y me ayudaron con mi retiro de afore. Gracias.
-                                                </div>
-
-                                                <div class="info-box">
-                                                    <div class="image-box"><img src="images/clients/Comentario1.jpeg" alt="" style="width: 100px;"></div>
-                                                    <div class="text-box"> 
-                                                        <h5 class="name">Dana Morales
-                                                        </h5>
-                                                        <!-- <span class="designation">CEO, InDesign</span> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="testimonial-block-two">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="thumb"><img src="images/clients/nuevo.png" alt=""></div>
                             </div>
+                            <div class="info-box">
+                                <div class="text">
+                                    No sabía que ya calificaba para el credito de infonavit estoy haciendo el crediterreno.</div>
+                                <h5 class="name">Miguel Gomez</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                <!-- Testimonial block two -->
+                <div class="testimonial-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <div class="thumb"><img src="images/clients/Comentario1.jpeg" alt=""></div>
+                        </div>
+                         <div class="info-box">
+                            <div class="text">A mí me recomendó mi prima a esta empresa y me ayudaron con mi retiro de afore. Gracias.</div>
+                            <h5 class="name">Dana Morales</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="testimonial-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <div class="thumb"><img src="images/clients/Comentario1.jpeg" alt=""></div>
+                        </div>
+                         <div class="info-box">
+                            <div class="text">Soy en nuevo en trámites de Afore, pero ya me están explicando los trámites que uno puede hacer.</div>
+                            <h5 class="name">Rodrigo Jorge</h5>
                         </div>
                     </div>
                 </div>
             </div>
-        
+        </div>
     </section>
     <!--End testimonial Section -->
+
+
+    
+    <section class="offer-section" style="background-image: url(https://media.istockphoto.com/id/2150778542/photo/user-customer-review-evaluates-satisfaction-with-a-product-or-service-customers-give-a-rating.jpg?s=2048x2048&w=is&k=20&c=VRsVfGiqAQbf-vgBBIaTDPEK-Gb0CdbtcwgW8XtWD20=);">
+        <div class="auto-container">
+            <div class="row">
+                <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <!-- <span class="title">Danos tu opinión</span> -->
+                        <h2><span></span></h2>
+                        <br>
+                        <span class="discount">Danos tu opinión</span>
+                        <!-- <div class="text">Fill out the form to download a book with 10 tips<br> on how to save your money</div> -->
+                    </div>
+                </div> 
+
+                <div class="form-column order-last col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <div class="discount-form">
+                            <!--Comment Form-->
+                            <form name="ComentariosIndex" netlify action="Gracias/">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <input type="text" name="username" placeholder="Nombre" required>
+                                    </div>
+                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <input type="email" name="email" placeholder="Correo" required>
+                                    </div>
+
+                                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <input type="text" name="phone" placeholder="Phone" required>
+                                    </div> -->
+                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <textarea name="message" placeholder="Comentario"></textarea>
+                                    </div>
+                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group text-center">
+                                        <button class="theme-btn btn-style-one" type="submit" name="submit-form">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    
 
     <!-- Team Section -->
     <
@@ -1031,7 +1062,7 @@
 <!-- End Color Switcher -->
 
 <!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+<!-- <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div> -->
 <script src="js/jquery.js"></script> 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -1043,6 +1074,24 @@
 <script src="js/jquery-ui.js"></script>
 <script src="js/mixitup.js"></script>
 <script src="js/script.js"></script>
+
+
+<script>
+    function togglePopup() {
+  const popup = document.getElementById('popup-card');
+  const chatIcon = document.getElementById('chat-icon');
+
+  if (popup.style.display === 'none' || popup.style.display === '') {
+    popup.style.display = 'flex'; // Mostrar el popup
+    chatIcon.style.display = 'none'; // Ocultar el ícono de chat
+  } else {
+    popup.style.display = 'none'; // Ocultar el popup
+    chatIcon.style.display = 'flex'; // Mostrar el ícono de chat
+  }
+}
+
+</script>
+
 <!-- Color Setting -->
 <script src="js/color-settings.js"></script>
 </body>
