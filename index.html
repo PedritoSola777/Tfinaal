@@ -7,6 +7,8 @@
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">   
+<link rel="stylesheet" href="path/to/owl.carousel.min.css">
+<link rel="stylesheet" href="path/to/owl.theme.default.min.css">
 <!--Color Switcher Mockup-->
 <link href="css/color-switcher-design.css" rel="stylesheet">
 <!--Color Themes-->
@@ -25,6 +27,64 @@
 <meta property="og:url" content="https://terra-test.netlify.app/">
 <meta property="og:type" content="website">
 
+
+
+<style>
+    /* Ajustes generales para tu sección */
+    .services-section {
+      background-image: url("images/background/1.jpg");
+      background-size: cover;  /* Ajusta a tu preferencia */
+      background-position: center;
+      padding: 50px 0;
+    }
+
+    .sec-title {
+      margin-bottom: 40px;
+    }
+
+    .sec-title h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    /* Ajustes para los bloques de servicio */
+    .service-block .inner-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      text-align: center;
+      gap: 1rem; /* Espacio entre icono y texto */
+      background: #fff; /* Fondo blanco (opcional) */
+      padding: 20px;    /* Ajusta según tu gusto */
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
+    }
+
+    .service-block .icon-box img,
+    .service-block .icon-box i {
+      max-width: 80px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .service-block .lower-content h3 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .service-block .lower-content .text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* Ajustes específicos de Owl Carousel (espacio entre ítems, flechas, etc.) */
+    .owl-carousel .owl-item {
+      padding: 0 10px; /* Ajusta el padding entre slides */
+    }
+  </style>
 
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
@@ -392,211 +452,132 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services-section" style="background-image: url(images/background/1.jpg);">
-        <div class="auto-container">    
-            <div class="sec-title text-center">
-                <h2>Nuestros Servicios</h2>
-            </div>
-            <div class="services-box row clearfix">
-                <div class="services-carousel owl-carousel owl-theme">
-                    <!-- Service Block -->
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <img src="/images/icons/desempleados.png" alt="" >
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Retiro parcial por desempleo
-                                </a></h3>
-                                <div class="text">Gestionamos tus trámites de afore para que puedas acceder a tus ahorros en caso de desempleo de manera rápida y sin complicaciones.
-
-                                </div>
-                                <!-- <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div> -->
-                            </div>
-                        </div>
+    <section class="services-section">
+        <div class="auto-container">
+          <div class="sec-title text-center">
+            <h2>Nuestros Servicios</h2>
+          </div>
+    
+          <!-- En lugar de usar .row, dejaremos que Owl Carousel controle el layout -->
+          <div class="services-box clearfix">
+            <div class="services-carousel owl-carousel owl-theme">
+              <!-- ========== Service Block 1 ========== -->
+              <div class="service-block">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <img src="/images/icons/desempleados.png" alt="">
+                  </div>
+                  <div class="lower-content">
+                    <h3><a href="#">Retiro parcial por desempleo</a></h3>
+                    <div class="text">
+                      Gestionamos tus trámites de afore para que puedas acceder a tus ahorros en caso de desempleo de manera rápida y sin complicaciones.
                     </div>
-
-                    <!-- Service Block -->
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <i class="flaticon-house"></i>
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Retiro parcial por remodelación de vivienda</a></h3>
-                                <div class="text">Te asistimos en el proceso de retiro de tu afore para invertir en la remodelación de tu hogar, haciendo el trámite sencillo y eficiente.</div>
-                                <!-- <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <img src="/images/icons/apoyar.png" alt="" >
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Pensión por Cesantía</a></h3>
-                                <div class="text">Si tienes 60 años o más y has dejado de trabajar, te ayudamos a obtener tu pensión por cesantía de manera rápida y sencilla.</div>
-                                <!-- <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <img src="/images/icons/vejez.png" alt="" >
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Pensión por vejez</a></h3>
-                                <div class="text">¿Cumpliste 65 años y deseas asegurar tu retiro? Nosotros te ayudamos a obtener tu pensión de forma rápida y sin complicaciones.</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <style>
-                       
-                       .service-block .inner-box {
-  display: flex;
-  flex-direction: column;   /* Coloca ícono arriba, luego título y texto */
-  align-items: center;      /* Centra horizontalmente los elementos */
-  text-align: center;       /* Centra el contenido textual */
-  gap: 1rem;                /* Espacio entre el ícono y el texto (opcional) */
-}
-
-.icon-box img {
-  max-width: 80px;          /* Ajusta el tamaño del ícono según necesites */
-  height: auto;
-  display: block;           /* Evita saltos/espacios extra de elementos inline */
-}
-
-
-                    </style>
-
-                    <!-- Service Block -->
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <img src="/images/icons/pareja.png" alt="" >
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Retiro parcial por matrimonio</a></h3>
-                                <div class="text">Te apoyamos en los trámites necesarios para utilizar tus recursos de afore en esta nueva etapa de tu vida.</div>
-                                <!-- <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Block -->
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <img src="/images/icons/pension.png" alt="" >
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Negativa de pensión</a></h3>
-                                <div class="text">La negativa de pensión ocurre cuando una solicitud de pensión es rechazada por no cumplir con los requisitos legales o administrativos necesarios. Las razones comunes para una negativa pueden incluir insuficientes semanas de cotización, falta de documentos, o no cumplir con la edad mínima requerida</div>
-                                <!-- <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Block -->
-                    <!-- <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <i class="flaticon-house"></i>
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Conceptual Architecture</a></h3>
-                                <div class="text">Planning and zoning are important tools for communities in that they provide the opportunity to establish sound and efficient land use patterns.</div>
-                                <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- Service Block -->
-                    <!-- <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <i class="flaticon-town"></i>
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Apartment Buildings</a></h3>
-                                <div class="text">Planning and zoning are important tools for communities in that they provide the opportunity to establish sound and efficient land use patterns.</div>
-                                <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- Service Block -->
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <img src="/images/icons/40.png" alt="" >
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Modalidad 40</a></h3>
-                                <div class="text">Con la Modalidad 40, incrementa tu pensión y asegura una mejor calidad de vida al jubilarte. Descubre cómo esta opción puede ayudarte a mejorar tus semanas cotizadas y el monto de tu retiro.                                </div>
-                                <!-- <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Block -->
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <i class="flaticon-house"></i>
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Créditos de vivienda</a></h3>
-                                <div class="text">Obtén un crédito que se adapte a tus necesidades y comienza a construir o adquirir la vivienda que siempre quisiste. Aprovecha los beneficios diseñados para ti.</div>
-                                <!-- <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Block -->
-                    <!-- <div class="service-block">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <i class="flaticon-town"></i>
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="#">Apartment Buildings</a></h3>
-                                <div class="text">Planning and zoning are important tools for communities in that they provide the opportunity to establish sound and efficient land use patterns.</div>
-                                <div class="link-box">
-                                    <a href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
+              </div>
+              <!-- ========== Service Block 2 ========== -->
+              <div class="service-block">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <i class="flaticon-house"></i>
+                  </div>
+                  <div class="lower-content">
+                    <h3><a href="#">Retiro parcial por remodelación de vivienda</a></h3>
+                    <div class="text">
+                      Te asistimos en el proceso de retiro de tu afore para invertir en la remodelación de tu hogar, haciendo el trámite sencillo y eficiente.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ========== Service Block 3 ========== -->
+              <div class="service-block">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <img src="/images/icons/apoyar.png" alt="">
+                  </div>
+                  <div class="lower-content">
+                    <h3><a href="#">Pensión por Cesantía</a></h3>
+                    <div class="text">
+                      Si tienes 60 años o más y has dejado de trabajar, te ayudamos a obtener tu pensión por cesantía de manera rápida y sencilla.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ========== Service Block 4 ========== -->
+              <div class="service-block">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <img src="/images/icons/vejez.png" alt="">
+                  </div>
+                  <div class="lower-content">
+                    <h3><a href="#">Pensión por vejez</a></h3>
+                    <div class="text">
+                      ¿Cumpliste 65 años y deseas asegurar tu retiro? Nosotros te ayudamos a obtener tu pensión de forma rápida y sin complicaciones.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ========== Service Block 5 ========== -->
+              <div class="service-block">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <img src="/images/icons/pareja.png" alt="">
+                  </div>
+                  <div class="lower-content">
+                    <h3><a href="#">Retiro parcial por matrimonio</a></h3>
+                    <div class="text">
+                      Te apoyamos en los trámites necesarios para utilizar tus recursos de afore en esta nueva etapa de tu vida.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ========== Service Block 6 ========== -->
+              <div class="service-block">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <img src="/images/icons/pension.png" alt="">
+                  </div>
+                  <div class="lower-content">
+                    <h3><a href="#">Negativa de pensión</a></h3>
+                    <div class="text">
+                      La negativa de pensión ocurre cuando una solicitud de pensión es rechazada por no cumplir con los requisitos legales o administrativos necesarios...
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ========== Service Block 7 ========== -->
+              <div class="service-block">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <img src="/images/icons/40.png" alt="">
+                  </div>
+                  <div class="lower-content">
+                    <h3><a href="#">Modalidad 40</a></h3>
+                    <div class="text">
+                      Con la Modalidad 40, incrementa tu pensión y asegura una mejor calidad de vida al jubilarte...
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ========== Service Block 8 ========== -->
+              <div class="service-block">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <i class="flaticon-house"></i>
+                  </div>
+                  <div class="lower-content">
+                    <h3><a href="#">Créditos de vivienda</a></h3>
+                    <div class="text">
+                      Obtén un crédito que se adapte a tus necesidades y comienza a construir o adquirir la vivienda que siempre quisiste...
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Agrega más bloques si lo deseas -->
+            </div> <!-- Fin .services-carousel -->
+          </div> <!-- Fin .services-box -->
+        </div> <!-- Fin .auto-container -->
+      </section>
     <!--End Services Section -->
 
     <div id="chat-icon" class="chat-icon" onclick="togglePopup()">
@@ -1179,7 +1160,8 @@
 <script src="js/jquery-ui.js"></script>
 <script src="js/mixitup.js"></script>
 <script src="js/script.js"></script>
-
+<script src="path/to/jquery.min.js"></script>
+<script src="path/to/owl.carousel.min.js"></script>
 
 <script>
     function togglePopup() {
@@ -1196,6 +1178,32 @@
 }
 
 </script>
+
+
+<script>
+    $(document).ready(function(){
+      $('.services-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,         // Flechas de navegación
+        dots: true,        // Puntos de navegación
+        autoplay: true,    // Avanza automáticamente
+        autoplayTimeout: 3000, // 3 segundos
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1024: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
+
 
 <!-- Color Setting -->
 <script src="js/color-settings.js"></script>
