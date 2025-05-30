@@ -537,7 +537,7 @@
                         <!--Column-->
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                             <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="108">0</span></div>
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="110">0</span></div>
                                 <h4 class="counter-title">ASESORES EXPERTOS</h4>
                             </div>
                         </div>
@@ -545,7 +545,7 @@
                         <!--Column-->
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
                             <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="2312">0</span></div>
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="2588">0</span></div>
                                 <h4 class="counter-title">TRÁMITES REALIZADOS</h4>
                             </div>
                         </div>
@@ -723,56 +723,61 @@
       </div>
 
       
-     <style>
-        .popup-card {
+   <style>
+    .popup-card {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px; /* espacio para evitar el chat-icon */
   right: 20px;
   width: 450px;
+  max-width: 90vw; /* limitar ancho en móviles */
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: none; /* Initially hidden */
+  display: none;
   padding: 15px;
   font-family: Arial, sans-serif;
   z-index: 1000;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .profile-image {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin-right: 15px;
-}
-
-.popup-content {
-  flex: 1;
+  margin-bottom: 10px;
+  align-self: center;
 }
 
 .popup-content h4 {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
+  text-align: center;
 }
 
 .popup-content p {
   margin: 5px 0 10px;
-  font-size: 12px;
+  font-size: 14px;
   color: #555;
+  text-align: center;
 }
 
 .popup-actions {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .email-btn,
 .whatsapp-btn {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 6px 12px;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 .email-btn {
@@ -790,7 +795,6 @@
   opacity: 0.9;
 }
 
-/* Close Button Styles */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -801,7 +805,6 @@
   color: #999;
 }
 
-/* Chat Icon Styles */
 .chat-icon {
   position: fixed;
   bottom: 20px;
@@ -819,7 +822,40 @@
   cursor: pointer;
   z-index: 1000;
 }
-     </style>
+
+/* 🔽 Responsividad para móviles */
+@media screen and (max-width: 480px) {
+  .popup-card {
+    width: 90%;
+    right: 5%;
+    bottom: 90px;
+    padding: 10px;
+  }
+
+  .popup-content h4 {
+    font-size: 14px;
+  }
+
+  .popup-content p {
+    font-size: 13px;
+  }
+
+  .popup-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email-btn,
+  .whatsapp-btn {
+    width: 80%;
+    text-align: center;
+  }
+
+  .close-btn {
+    font-size: 18px;
+  }
+}
+   </style>
 
 
     <!--Fluid Section One Section -->
@@ -936,7 +972,7 @@
                             <div class="thumb"><img src="https://images.unsplash.com/photo-1720210470561-941744ebad00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2VudGUlMjBtZXhpY2FuYXxlbnwwfHwwfHx8MA%3D%3D" alt=""></div>
                         </div>
                          <div class="info-box">
-                            <div class="text">Gracias a su asesoría, pude recuperar mi ahorro de afore rápidamente. El equipo es profesional y siempre estuvo al tanto de mi caso.</div>
+                            <div class="text">Gracias a su asesoría estoy recuperando el saldo de los ahorros que he hecho para alcanzarme a pensionar para el 2027</div>
                             <h5 class="name">Sofia martinez</h5>
                         </div>
                     </div>
@@ -962,7 +998,7 @@
                             <div class="thumb"><img src="https://cdn.midjourney.com/71f96d6a-e1d6-4afe-80f6-3e009ff26474/0_0.png" alt=""></div>
                         </div>
                          <div class="info-box">
-                            <div class="text">Es la segunda vez que hago mi retiro de aportaciones voluntarias y siempre es sencillo los trámites con ellos.</div>
+                            <div class="text">Se me hace muy caro el crédito de infonavit pero es la única manera para que uno pueda tener casa propia en la actualidad</div>
                             <h5 class="name">Julio Jimenez</h5>
                         </div>
                     </div>
@@ -1160,7 +1196,7 @@
                         <!-- <span class="title">Danos tu opinión</span> -->
                         <h2><span></span></h2>
                         <br>
-                        <span class="discount">Queremos Escucharte</span>
+                        <span class="discount" style="font-size: 50px;">Queremos Escucharte</span>
                         <!-- <div class="text">Fill out the form to download a book with 10 tips<br> on how to save your money</div> -->
                     </div>
                 </div> 
@@ -1198,6 +1234,142 @@
             </div>
         </div>
     </section>
+
+    <style>
+       .offer-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 15px;
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Overlay para mejorar la visibilidad del texto */
+.offer-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.auto-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.offer-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+
+.content-column {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.content-column .inner-column h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.discount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 15px;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.form-column .inner-column {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.discount-form input,
+.discount-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.discount-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.theme-btn.btn-style-one {
+  background-color: #e38b00;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.theme-btn.btn-style-one:hover {
+  background-color: #cc7900;
+}
+
+/* 🔽 RESPONSIVE STYLES */
+@media screen and (max-width: 991px) {
+  .content-column .inner-column h2 {
+    font-size: 1.8rem;
+  }
+
+  .discount {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .offer-section {
+    padding: 40px 10px;
+  }
+
+  .form-column .inner-column {
+    padding: 20px 15px;
+  }
+
+  .theme-btn.btn-style-one {
+    width: 100%;
+  }
+
+  .content-column .inner-column h2,
+  .discount {
+    font-size: 1.5rem;
+  }
+}  </style>
     
 
     <!-- Team Section -->
@@ -1451,6 +1623,15 @@
       });
     });
   </script>
+
+
+<script>
+  function togglePopup() {
+    const popup = document.getElementById('popup-card');
+    popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
 
 
 <!-- Color Setting -->
